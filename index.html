@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Phone Hunting API </title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -25,12 +22,18 @@
 
             <input id="search-field" type="text" placeholder="Search" class="input input-bordered w-full max-w-xs" />
             <button onclick="handleSearch()" class="btn btn-accent">Serach</button>
+
+
           </section>
+        <!-- spiner or loader -->
 
         <!-- search result -->
             <section>
+                <div id="loading-spinner" class="text-center my-40 hidden">
+                        <span class="loading loading-spinner loading-lg"></span>
+                </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="Phone-container">
-                            <!-- <div class="card w-96 bg-gray-100 shadow-xl">
+                            <!-- <div class="card w-96 bg-gray-150 shadow-xl">
                             <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
                             <div class="card-body">
                             <h2 class="card-title">Shoes!</h2>
@@ -41,6 +44,10 @@
                             </div>
                             </div> -->
                     </div>
+                    <!-- Show All Button -->
+                     <div id="show-all-container" class="hidden text-center p-5">
+                        <button onclick="handleShowAll()" class="btn btn-accent">Show All</button>
+                     </div>
 
             </section>
 
