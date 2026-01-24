@@ -20,7 +20,7 @@ const displayPhone = (phones, isShowAll ) => {
     else{
         showAllContainerr.classList.add('hidden');
     }
-    console.log('is show all', isShowAll);
+   // console.log('is show all', isShowAll);
 
 
     // display only 12 phones if not show all
@@ -59,7 +59,17 @@ const handleShowDetail = async (id) =>{
     //load single phone data  data 
     const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
     const data = await res.json();
-    console.log(data);
+    const phone = data.data;
+
+    showPhoneDetails(phone)
+
+}
+
+const showPhoneDetails = (phone) =>{
+    console.log(phone);
+// display the modal
+show_details_modal.showModal();
+
 }
 
 
@@ -69,7 +79,7 @@ const handleSearch = (isShowAll) =>{
     toggleLoadingSpinner(true);
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
-    console.log(searchText);
+    // console.log(searchText);
     loadPhone(searchText, isShowAll);
 }
 
