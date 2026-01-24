@@ -11,18 +11,20 @@
 </head>
 <body>
     <header>
-            <h2 class="text-6xl " >Find your phone </h2>
+            <h2 class="text-6xl flex justify-center font-serif m-3 " >Hunting Phone </h2>
 
 
     </header>
     
     <main class="container mx-auto mt-8">
         <!-- Search box -->
-          <section class="bg-gray-100 p-4 m-4 ">
-
-            <input id="search-field" type="text" placeholder="Search" class="input input-bordered w-full max-w-xs" />
+          <section class="bg-gray-100 p-4 m-4 flex justify-center items-center ">
+    <div class="flex gap-7">
+            <input id="search-field" type="text" placeholder="Type ..." class="input input-bordered w-full max-w-lg " />
             <button onclick="handleSearch()" class="btn btn-accent">Serach</button>
-
+    </div>
+            
+  
 
           </section>
         <!-- spiner or loader -->
@@ -55,10 +57,13 @@
             <section>
                 <!-- Open the modal using ID.showModal() method -->
               
-             <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+             <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle ">
               <div class="modal-box">
-             <h3 id="phone-name" class="font-bold text-lg">Hello!</h3>
-              <p class="py-4">Press ESC key or click the button below to close</p>
+             <h3 id="show-detaile-phone-name" class="font-bold text-3xl text-center"></h3>
+              <div id="show-detail-container" class="text-center font-sans flex flex-col items-center justify-center">
+
+
+              </div>
              <div class="modal-action">
                <form method="dialog">
                <!-- if there is a button in form, it will close the modal -->
